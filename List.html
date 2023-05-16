@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h1>Grocery List</h1>
+        <div class="row">
+            <div>
+                <label for="item">item</label>
+                <input type="text" id="item" name="first_item" placeholder="First">
+            </div>
+        </div>
+        <div>
+        </div>
+        <button name="clear">Clear</button>
+        <button name="Enter Item">Enter Item</button>
+
+    </div>
+</div>
+<script>
+    const firstitem = document.getElementById(`first`);
+
+    firstitem.addEventListener(`change`, function (e){
+        let first = firstitem.value;
+        if (fullName.length>1){
+            full.classList.remove("hidden")
+        }  else {
+            full.classList.add("hidden")
+        }
+    });
+    const message = document.createElement(`h2`)
+    message.innerHTML = `Hello ${firstName}`
+    text.insertAdjacentElement(`afterbegin`,message)
+
+    clearButton.addEventListener(`click`, function (e){
+        firstName.value = "";
+        lastName.value = "";
+        full.textContent = "";
+    })
+</script>
+</body>
+</html>

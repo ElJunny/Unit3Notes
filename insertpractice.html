@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>What is this?</h3>
+        <h4>I dont want this</h4>
+    </div>
+</div>
+<script>
+    const content =  document.querySelector(`.content`);
+    //Replace contents of an htm tag using innerHTML
+    content.innerHTML = `<h4 class="gone"> <h1>I love the Zelda trilogy</h1><h4>But Breath of the Wild is my favorite</h4>`
+
+    //add a new element in addition to existing elements
+    const zelda = document.createElement(`h1`);
+    zelda.innerHTML = `I love Gardening`;
+    content.appendChild(zelda);
+
+    const politics = document.createElement(`h1`);
+    politics.innerHTML = `I hate politics`;
+    content.appendChild(politics);
+
+    const polpyhia = document.createElement(`h1`);
+    polpyhia.innerHTML = `I love polpyhia`;
+    content.appendChild(polpyhia);
+
+    const guitar = document.createElement(`h1`);
+    guitar.innerHTML = `I am in love with my guitar`;
+    content.appendChild(guitar);
+
+    //put this ar the top in addition to existing elements
+    const food = document.createElement(`h1`);
+    food.innerHTML = `I love Tamales`;
+    content.insertAdjacentElement(`afterend`, food);
+
+    //to remove an element
+    const unwantedElement = document.querySelector(`.gone`);
+    unwantedElement.remove();
+
+</script>
+</body>
+</html>
