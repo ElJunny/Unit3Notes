@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Guitarist Story</title>
+    <link rel="stylesheet" href="3.7.css">
+</head>
+<body>
+<h1>A Guitarist Story</h1>
+<div>
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="profile">
+    <button id="button1">Strum Here</button>
+                    <div class="scoreplace">
+                        <h4 id="score">0</h4>
+                    </div>
+    <div>
+        <script>
+            const content = document.querySelector('.content');
+            const levelupbutton = document.getElementById('levelup');
+            const scoreplace = document.querySelector('.scoreplace');
+            let score = document.getElementById('score');
+
+
+            score = 0;
+            levelupbutton.addEventListener('click', function (e) {
+                score++;
+                scoreplace.innerHTML = `<h4 id="score">${score}</h4>`;
+                </script>
+    </div>
+</div>
+<img class="guitar" src="https://m.media-amazon.com/images/I/61W02N5lneL._SY450_.jpg">
+</body>
+</html>
