@@ -2,35 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>A Guitarist Story</title>
-    <link rel="stylesheet" href="3.7.css">
+    <title>A guitarist story</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+    </style>
 </head>
 <body>
-<h1>A Guitarist Story</h1>
-<div>
-    <div class="container">
-        <div class="content">
-            <div class="row">
-                <div class="profile">
-    <button id="button1">Strum Here</button>
-                    <div class="scoreplace">
-                        <h4 id="score">0</h4>
-                    </div>
-    <div>
-        <script>
-            const content = document.querySelector('.content');
-            const levelupbutton = document.getElementById('levelup');
-            const scoreplace = document.querySelector('.scoreplace');
-            let score = document.getElementById('score');
-
-
-            score = 0;
-            levelupbutton.addEventListener('click', function (e) {
-                score++;
-                scoreplace.innerHTML = `<h4 id="score">${score}</h4>`;
-                </script>
+<h3>A guitarist story</h3>
+<div class="container">
+    <div class="content">
+        <div class="row">
+            <div class="profile">
+                <h3 id="pfn">Toy Guitar:</h3>
+                <h1></h1>
+            </div>
+            <img id="picture" src="https://w2aws.lavamusic.com/lavamusic/EN/images/lavame3/me3m-banner.png" alt="Tier one: Slug" width="145" height="116">
+        </div>
+        <div class="row">
+            <fieldset>
+                <legend><h3><bold>Guitar Shop!</bold></h3></legend>
+                <div class="x4div" id="4xboost">
+                    <label for="4x">Pro amplifier: (200 points needed to activate) </label>
+                    <input id="4x" type="checkbox">
+                </div>
+                <div class="Cool Charm" id="7xboost">
+                    <label for="7x">Pro Charm: (399 points needed to activate) </label>
+                    <input id="7x" type="checkbox">
+                </div>
+                <div class="Ticket of hall of fame" id="10xboost">
+                    <label for="10x">Ticket to Rock of fame: (100,000,000,000 points needed to activate) </label>
+                    <input id="10x" type="checkbox">
+                </div>
+            </fieldset>
+            <h3>Level:</h3>
+            <div class="scoreplace">
+                <h4 id="score">0</h4>
+            </div>
+            <button id="levelup">Click here to strum!</button>
+        </div>
+        <div class="row">
+            <fieldset>
+            </fieldset>
+        </div>
     </div>
 </div>
-<img class="guitar" src="https://m.media-amazon.com/images/I/61W02N5lneL._SY450_.jpg">
+<script>
+    const content = document.querySelector('.content');
+    const levelupbutton = document.getElementById('levelup');
+    const scoreplace = document.querySelector('.scoreplace');
+    const picture = document.getElementById('picture');
+    const profile = document.querySelector('.profile');
+    let hiddenstuff = document.querySelector('.hidden');
+    let timestwoboost = document.getElementById('x2');
+    let score = document.getElementById('score');
+
+
+
+    score = 0;
+    levelupbutton.addEventListener('click', function (e) {
+        score++;
+        scoreplace.innerHTML = `<h4 id="score">${score}</h4>`;
+
+
+
+        if (score == 76) {
+            picture.src = "https://media.musiciansfriend.com/is/image/MMGS7/Special-X-Style-000-Cutaway-Acoustic-Electric-Guitar-Black/L66003000001000-00-500x500.jpg";
+            profile.innerHTML = `<h3 id="pfn">Martin Special X:</h3>`;
+        }
+        if (score == 120) {
+            profile.innerHTML = `<h3 id="pfn">TOD10N:</h3>`;
+            picture.src = "https://media.sweetwater.com/api/i/q-82__ha-f372f15ff5357f5d__hmac-86fd49d70955412f09277b4e68102522e4db37e1/images/closeup/750-TOD10NBlk_front.jpg";
+        }
+        if (score == 200) {
+            profile.innerHTML = `<h3 id="pfn">TOD10:</h3>`;
+            picture.src = "https://www.kraftmusic.com/media/catalog/product/cache/3fedc8207dcd37094c7cd808f4dc6b12/i/b/iba-tod10_02.jpg"
+        }
+        if (score == 280) {
+            profile.innerHTML = `<h3 id="pfn">Ibanez GRG 6 String:</h3>`;
+            picture.src = "https://m.media-amazon.com/images/I/71sLr3QykVL._AC_SX679_.jpg";
+        }
+        if (score == 360) {
+            content.innerHTML = `<h3>You Won!</h3>`;
+        }
+        if (score == 200) {
+            hiddenstuff = document.getElementById("x4div").classList.add = "hidden"
+        }
+    })
+
+
+
+
+</script>
 </body>
 </html>
