@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>A guitarist story</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="3.7.css" rel="stylesheet" type="text/css" />
     <style>
     </style>
+
 </head>
 <body>
-<h3>A guitarist story</h3>
 <div class="container">
     <div class="content">
         <div class="row">
-            <div class="profile">
+            <div class="profile">   <h1>A guitarist story</h1>
+
                 <h3 id="pfn">Toy Guitar:</h3>
                 <h1></h1>
             </div>
@@ -21,17 +22,17 @@
         <div class="row">
             <fieldset>
                 <legend><h3><bold>Guitar Shop!</bold></h3></legend>
-                <div class="x4div" id="4xboost">
+                <div class="x4div" id="button1">
                     <label for="4x">Pro amplifier: (200 points needed to activate) </label>
-                    <input id="4x" type="checkbox">
+                    <input id="4x" type="button">
                 </div>
-                <div class="Cool Charm" id="7xboost">
+                <div class="Cool Charm" id="button2">
                     <label for="7x">Pro Charm: (399 points needed to activate) </label>
-                    <input id="7x" type="checkbox">
+                    <input id="7x" type="button">
                 </div>
-                <div class="Ticket of hall of fame" id="10xboost">
-                    <label for="10x">Ticket to Rock of fame: (100,000,000,000 points needed to activate) </label>
-                    <input id="10x" type="checkbox">
+                <div class="Ticket of hall of fame" id="button3">
+                    <label for="10x">Ticket to Rock of fame: (100,000 points needed to activate) </label>
+                    <input id="10x" type="button">
                 </div>
             </fieldset>
             <h3>Level:</h3>
@@ -40,21 +41,19 @@
             </div>
             <button id="levelup">Click here to strum!</button>
         </div>
-        <div class="row">
-            <fieldset>
-            </fieldset>
-        </div>
     </div>
 </div>
 <script>
+
     const content = document.querySelector('.content');
     const levelupbutton = document.getElementById('levelup');
     const scoreplace = document.querySelector('.scoreplace');
     const picture = document.getElementById('picture');
     const profile = document.querySelector('.profile');
     let hiddenstuff = document.querySelector('.hidden');
-    let timestwoboost = document.getElementById('x2');
+    let button1 = document.getElementById('x2');
     let score = document.getElementById('score');
+
 
 
 
@@ -70,26 +69,24 @@
             profile.innerHTML = `<h3 id="pfn">Martin Special X:</h3>`;
         }
         if (score == 120) {
-            profile.innerHTML = `<h3 id="pfn">TOD10N:</h3>`;
-            picture.src = "https://media.sweetwater.com/api/i/q-82__ha-f372f15ff5357f5d__hmac-86fd49d70955412f09277b4e68102522e4db37e1/images/closeup/750-TOD10NBlk_front.jpg";
+            profile.innerHTML = `<h3 id="pfn">Ibanez TOD10N:</h3>`;
+            picture.src = "https://www.ibanez.com/common/product_artist_file/file/p_region_TOD10N_TKF_5B_01.png" ;
         }
         if (score == 200) {
-            profile.innerHTML = `<h3 id="pfn">TOD10:</h3>`;
+            profile.innerHTML = `<h3 id="pfn">Ibanez TOD10:</h3>`;
             picture.src = "https://www.kraftmusic.com/media/catalog/product/cache/3fedc8207dcd37094c7cd808f4dc6b12/i/b/iba-tod10_02.jpg"
         }
         if (score == 280) {
-            profile.innerHTML = `<h3 id="pfn">Ibanez GRG 6 String:</h3>`;
-            picture.src = "https://m.media-amazon.com/images/I/71sLr3QykVL._AC_SX679_.jpg";
+            profile.innerHTML = `<h3 id="pfn">Ibanez ICHI10:</h3>`;
+            picture.src = "https://www.ibanez.com/common/product_artist_file/file/p_region_ICHI10_VWM_1P_01.png";
         }
-        if (score == 360) {
-            content.innerHTML = `<h3>You Won!</h3>`;
+        if (score == 400) {
+            content.innerHTML = `<h3>You Have Completed the Guitarist Story!</h3>`;
         }
         if (score == 200) {
             hiddenstuff = document.getElementById("x4div").classList.add = "hidden"
         }
     })
-
-
 
 
 </script>
